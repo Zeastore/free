@@ -20,7 +20,7 @@ commonname=none
 email=admin@bahenol
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/apih46/mini/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/Zeastore/free/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -128,13 +128,13 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/apih46/mini/main/ssh/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Zeastore/free/main/ssh/nginx.conf"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/apih46/mini/main/ssh/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Zeastore/free/main/ssh/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -239,7 +239,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 # banner /etc/issue.net
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/issue.net "https://raw.githubusercontent.com/apih46/mini/main/issue.net"
+wget -q -O /etc/issue.net "https://raw.githubusercontent.com/Zeastore/free/main/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
@@ -250,7 +250,7 @@ cat> /etc/issue.net << END
 END
 
 #install bbr dan optimasi kernel
-wget https://raw.githubusercontent.com/apih46/mini/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://raw.githubusercontent.com/Zeastore/free/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -271,17 +271,17 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O usernew "https://raw.githubusercontent.com/apih46/mini/main/ssh/usernew.sh"
-wget -O hapus "https://raw.githubusercontent.com/apih46/mini/main/ssh/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/apih46/mini/main/ssh/member.sh"
-wget -O renew "https://raw.githubusercontent.com/apih46/mini/main/ssh/renew.sh"
-wget -O cek "https://raw.githubusercontent.com/apih46/mini/main/ssh/cek.sh"
-wget -O add-host "https://raw.githubusercontent.com/apih46/mini/main/ssh/add-host.sh"
-wget -O speedtest "https://raw.githubusercontent.com/apih46/mini/main/ssh/speedtest_cli.py"
-wget -O xp "https://raw.githubusercontent.com/apih46/mini/main/ssh/xp.sh"
-wget -O asu "https://raw.githubusercontent.com/apih46/mini/main/asu.sh"
-wget -O menu "https://raw.githubusercontent.com/apih46/mini/main/menu.sh"
-wget -O sshws "https://raw.githubusercontent.com/apih46/mini/main/ssh/sshws.sh"
+wget -O usernew "https://raw.githubusercontent.com/Zeastore/free/main/ssh/usernew.sh"
+wget -O hapus "https://raw.githubusercontent.com/Zeastore/free/main/ssh/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/Zeastore/free/main/ssh/member.sh"
+wget -O renew "https://raw.githubusercontent.com/Zeastore/free/main/ssh/renew.sh"
+wget -O cek "https://raw.githubusercontent.com/Zeastore/free/main/ssh/cek.sh"
+wget -O add-host "https://raw.githubusercontent.com/Zeastore/free/main/ssh/add-host.sh"
+wget -O speedtest "https://raw.githubusercontent.com/Zeastore/free/main/ssh/speedtest_cli.py"
+wget -O xp "https://raw.githubusercontent.com/Zeastore/free/main/ssh/xp.sh"
+wget -O asu "https://raw.githubusercontent.com/Zeastore/free/main/asu.sh"
+wget -O menu "https://raw.githubusercontent.com/Zeastore/free/main/menu.sh"
+wget -O sshws "https://raw.githubusercontent.com/Zeastore/free/main/ssh/sshws.sh"
 chmod +x usernew
 chmod +x menu
 chmod +x hapus
