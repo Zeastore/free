@@ -18,7 +18,7 @@ curl -fsSL https://rclone.org/install.sh | bash > /dev/null 2>&1
 printf "q\n" | rclone config > /dev/null 2>&1
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Downloading rclone config ... "
-wget -q -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/apih46/mini/main/bckp/rclone.conf"
+wget -q -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/Zeastore/free/main/bckp/rclone.conf"
 git clone https://github.com/magnific0/wondershaper.git &> /dev/null
 cd wondershaper
 sleep 1
