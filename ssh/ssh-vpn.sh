@@ -242,12 +242,12 @@ echo -e "[ ${green}INFO$NC ] Settings banner"
 wget -q -O /etc/issue.net "https://raw.githubusercontent.com/Zeastore/free/main/issue.net"
 chmod +x /etc/issue.net
 echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
-sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
-cat> /etc/issue.net << END
-<font color="red"><b>============================</b></font><br> 
-<font color="white"><b>         JANDA_BAHENOL         </b></font><br> 
-<font color="red"><b>============================</b></font>
-END
+#sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
+#cat> /etc/issue.net << END
+#<font color="red"><b>============================</b></font><br> 
+#<font color="white"><b>         JANDA_BAHENOL         </b></font><br> 
+#<font color="red"><b>============================</b></font>
+#END
 
 #install bbr dan optimasi kernel
 wget https://raw.githubusercontent.com/Zeastore/free/main/ssh/bbr.sh && chmod +x bbr.sh && ./bbr.sh
