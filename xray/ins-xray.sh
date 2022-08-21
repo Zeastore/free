@@ -3,51 +3,6 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
-BURIQ () {
-    curl -sS https://raw.githubusercontent.com/apih46/access/main/ip > /root/tmp
-    data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
-    for user in "${data[@]}"
-    do
-    exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
-    d1=(`date -d "$exp" +%s`)
-    d2=(`date -d "$biji" +%s`)
-    exp2=$(( (d1 - d2) / 86400 ))
-    if [[ "$exp2" -le "0" ]]; then
-    echo $user > /etc/.$user.ini
-    else
-    rm -f /etc/.$user.ini > /dev/null 2>&1
-    fi
-    done
-    rm -f /root/tmp
-}
-
-MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/apih46/access/main/ip | grep $MYIP | awk '{print $2}')
-echo $Name > /usr/local/etc/.$Name.ini
-CekOne=$(cat /usr/local/etc/.$Name.ini)
-
-Bloman () {
-if [ -f "/etc/.$Name.ini" ]; then
-CekTwo=$(cat /etc/.$Name.ini)
-    if [ "$CekOne" = "$CekTwo" ]; then
-        res="Expired"
-    fi
-else
-res="Permission Accepted..."
-fi
-}
-
-PERMISSION () {
-    MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/apih46/access/main/ip | awk '{print $4}' | grep $MYIP)
-    if [ "$MYIP" = "$IZIN" ]; then
-    Bloman
-    else
-    res="Permission Denied!"
-    fi
-    BURIQ
-}
-
 clear
 red='\e[1;31m'
 green='\e[0;32m'
@@ -527,7 +482,7 @@ sed -i '$ igrpc_pass grpc://127.0.0.1:30310;' /etc/nginx/conf.d/xray.conf
 sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 sleep 1
 echo -e "[ ${green}INFO$NC ] Installing bbr.."
-#wget -q -O /usr/bin/bbr "https://raw.githubusercontent.com/apih46/mini/main/dll/bbr.sh"
+#wget -q -O /usr/bin/bbr "https://raw.githubusercontent.com/Zeastore/free/main/dll/bbr.sh"
 #chmod +x /usr/bin/bbr
 #bbr >/dev/null 2>&1
 #rm /usr/bin/bbr >/dev/null 2>&1
@@ -541,14 +496,14 @@ systemctl restart nginx
 systemctl enable runn
 systemctl restart runn
 sleep 1
-wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/apih46/mini/main/xray/add-ws.sh" && chmod +x /usr/bin/add-ws
-wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/apih46/mini/main/xray/add-vless.sh" && chmod +x /usr/bin/add-vless
-wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/apih46/mini/main/xray/add-tr.sh" && chmod +x /usr/bin/add-tr
-wget -q -O /usr/bin/del-user "https://raw.githubusercontent.com/apih46/mini/main/xray/del-ws.sh" && chmod +x /usr/bin/del-user
-wget -q -O /usr/bin/cek-user "https://raw.githubusercontent.com/apih46/mini/main/xray/cek-ws.sh" && chmod +x /usr/bin/cek-ws
-wget -q -O /usr/bin/renew-user "https://raw.githubusercontent.com/apih46/mini/main/xray/renew-ws.sh" && chmod +x /usr/bin/renew-user
-wget -q -O /usr/bin/crtv2ray "https://raw.githubusercontent.com/apih46/mini/main/xray/crt.sh" && chmod +x /usr/bin/crtv2ray
-wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/apih46/mini/main/xray/add-ssws.sh" && chmod +x /usr/bin/add-ssws
+wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-ws.sh" && chmod +x /usr/bin/add-ws
+wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-vless.sh" && chmod +x /usr/bin/add-vless
+wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-tr.sh" && chmod +x /usr/bin/add-tr
+wget -q -O /usr/bin/del-user "https://raw.githubusercontent.com/Zeastore/free/main/xray/del-ws.sh" && chmod +x /usr/bin/del-user
+wget -q -O /usr/bin/cek-user "https://raw.githubusercontent.com/Zeastore/free/main/xray/cek-ws.sh" && chmod +x /usr/bin/cek-ws
+wget -q -O /usr/bin/renew-user "https://raw.githubusercontent.com/Zeastore/free/main/xray/renew-ws.sh" && chmod +x /usr/bin/renew-user
+wget -q -O /usr/bin/crtv2ray "https://raw.githubusercontent.com/Zeastore/free/main/xray/crt.sh" && chmod +x /usr/bin/crtv2ray
+wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-ssws.sh" && chmod +x /usr/bin/add-ssws
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 yellow "xray/Vmess"
