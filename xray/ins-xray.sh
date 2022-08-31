@@ -496,6 +496,14 @@ wget -q -O /usr/bin/cek-user "https://raw.githubusercontent.com/Zeastore/free/ma
 wget -q -O /usr/bin/renew-user "https://raw.githubusercontent.com/Zeastore/free/main/xray/renew-ws.sh" && chmod +x /usr/bin/renew-user
 wget -q -O /usr/bin/crtv2ray "https://raw.githubusercontent.com/Zeastore/free/main/xray/crt.sh" && chmod +x /usr/bin/crtv2ray
 wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-ssws.sh" && chmod +x /usr/bin/add-ssws
+  chmod +x add-ws
+  chnod +x add-vless
+  chmod +x add-tr
+  chmod +x del-user
+  chmod +x cek-user
+  chmod +x renew-user
+  chmod +x certv2ray
+  chmod +x add-ssws
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 yellow "xray/Vmess"
