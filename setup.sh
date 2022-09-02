@@ -155,12 +155,12 @@ echo "IP=" >> /var/lib/premium-script/ipvps.conf
  #       Nothing input for domain!
 #        Then a random domain will be created"
     else
-        echo "$pp" > /root/scdomain
-	echo "$pp" > /etc/xray/scdomain
-	echo "$pp" > /etc/xray/domain
-	echo "$pp" > /etc/v2ray/domain
-	echo $pp > /root/domain
-        echo "IP=$pp" > /var/lib/scrz-prem/ipvps.conf
+        echo "$jj" > /root/scdomain
+	echo "$jj" > /etc/xray/scdomain
+	echo "$jj" > /etc/xray/domain
+	echo "$jj" > /etc/v2ray/domain
+	echo "$jj" > /root/domain
+        echo "IP=$jj" > /var/lib/scrz-prem/ipvps.conf
     fi
     
 #install ssh ovpn
