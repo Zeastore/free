@@ -139,15 +139,21 @@ echo ""
 wget -q https://raw.githubusercontent.com/Zeastore/free/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
-wget -q "https://raw.githubusercontent.com/Zeastore/free/main/ssh/cf.sh" && chmod +x cf.sh && ./cf.sh
-clear
-yellow "Add Domain for vmess/vless/trojan dll"
-echo " "
-read -rp "Input ur domain : " -e pp
-    if [ -z $pp ]; then
-        echo -e "
-        Nothing input for domain!
-        Then a random domain will be created"
+
+mkdir /var/lib/premium-script;
+echo "IP=" >> /var/lib/premium-script/ipvps.conf
+ wget -q "https://raw.githubusercontent.com/Zeastore/free/main/ssh/cf.sh" && chmod +x cf.sh && ./cf.sh
+ read -rp "automatic domain : " -e jj
+     if [$jj]; then
+         echo -e
+#clear
+# yellow "Add Domain for vmess/vless/trojan dll"
+# echo " "
+# read -rp "Input ur domain : " -e pp
+ #   if [ -z $pp ]; then
+ #       echo -e "
+ #       Nothing input for domain!
+#        Then a random domain will be created"
     else
         echo "$pp" > /root/scdomain
 	echo "$pp" > /etc/xray/scdomain
