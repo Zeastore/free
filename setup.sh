@@ -143,7 +143,7 @@ clear
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
  wget -q "https://raw.githubusercontent.com/Zeastore/free/main/ssh/cf.sh" && chmod +x cf.sh && ./cf.sh
- read -rp "automatic domain : " -e jj
+ echo  "automatic domain....... : " -e jj
      if [$jj]; then
          echo -e
 #clear
