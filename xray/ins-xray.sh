@@ -502,7 +502,7 @@ wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/Zeastore/free/ma
   chmod +x del-user
   chmod +x cek-user
   chmod +x renew-user
-  chmod +x certv2ray
+  chmod +x crtv2ray
   chmod +x add-ssws
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
