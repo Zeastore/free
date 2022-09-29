@@ -121,31 +121,36 @@ echo -ne "[ ${green}INFO${NC} ] Check permission : "
 mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
 echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
 
-if [ -f "/etc/xray/domain" ]; then
-echo ""
-echo -e "[ ${green}INFO${NC} ] Script Already Installed"
-echo -ne "[ ${yell}WARNING${NC} ] Do you want to install again ? (y/n)? "
-read answer
-if [ "$answer" == "${answer#[Yy]}" ] ;then
+mkdir /var/lib/premium-script;
+echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
+wget https://raw.githubusercontent.com/Zeastore/gaspoll/main/cf.sh && chmod +x cf.sh && ./cf.sh
+
+
+#if [ -f "/etc/xray/domain" ]; then
+#echo ""
+#echo -e "[ ${green}INFO${NC} ] Script Already Installed"
+#echo -ne "[ ${yell}WARNING${NC} ] Do you want to install again ? (y/n)? "
+#read answer
+#if [ "$answer" == "${answer#[Yy]}" ] ;then
 rm setup.sh
-sleep 10
-exit 0
-else
-clear
-fi
-fi
+#sleep 10
+#exit 0
+#else
+#clear
+#fi
+#fi
 
 echo ""
 wget -q https://raw.githubusercontent.com/Zeastore/free/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
 
-mkdir /var/lib/premium-script;
-echo "IP=" >> /var/lib/premium-script/ipvps.conf
- wget -q "https://raw.githubusercontent.com/Zeastore/free/main/ssh/cf.sh" && chmod +x cf.sh && ./cf.sh
- echo  "automatic domain....... : " -e jj
-     if [$jj]; then
-         echo -e
+#mkdir /var/lib/premium-script;
+#echo "IP=" >> /var/lib/premium-script/ipvps.conf
+# wget -q "https://raw.githubusercontent.com/Zeastore/free/main/ssh/cf.sh" && chmod +x cf.sh && ./cf.sh
+# echo  "automatic domain....... : " -e jj
+#     if [$jj]; then
+$         echo -e
 #clear
 # yellow "Add Domain for vmess/vless/trojan dll"
 # echo " "
@@ -154,14 +159,14 @@ echo "IP=" >> /var/lib/premium-script/ipvps.conf
  #       echo -e "
  #       Nothing input for domain!
 #        Then a random domain will be created"
-    else
-        echo "$jj" > /root/scdomain
-	echo "$jj" > /etc/xray/scdomain
-	echo "$jj" > /etc/xray/domain
-	echo "$jj" > /etc/v2ray/domain
-	echo "$jj" > /root/domain
-        echo "IP=$jj" > /var/lib/scrz-prem/ipvps.conf
-    fi
+$    else
+$        echo "$jj" > /root/scdomain
+$	echo "$jj" > /etc/xray/scdomain
+$	echo "$jj" > /etc/xray/domain
+$	echo "$jj" > /etc/v2ray/domain
+$	echo "$jj" > /root/domain
+$        echo "IP=$jj" > /var/lib/scrz-prem/ipvps.conf
+$    fi
     
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
