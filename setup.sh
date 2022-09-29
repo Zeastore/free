@@ -118,13 +118,9 @@ echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
 sleep 2
 echo -ne "[ ${green}INFO${NC} ] Check permission : "
 
-mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
-echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
-
-mkdir /var/lib/premium-script;
+mkdir /var/lib/scrz-prem;
 echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
 wget https://raw.githubusercontent.com/Zeastore/gaspoll/main/cf.sh && chmod +x cf.sh && ./cf.sh
-
 
 #if [ -f "/etc/xray/domain" ]; then
 #echo ""
