@@ -19,7 +19,7 @@ else
 echo -e   "System Uptime   :  $uphours $upminutes"
 fi
 echo -e "Use Core        :  $rekk"
-echo -e "Current Domain  :  $(cat /etc/$bec/domain)"
+echo -e "Current Domain  :  $IP"
 echo -e "IP-VPS          :  $IPVPS"
 echo -e "\e[36m╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;41;36m                 SSH MENU                   \E[0m"
