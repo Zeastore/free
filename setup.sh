@@ -150,7 +150,7 @@ clear
 # wget -q "https://raw.githubusercontent.com/Zeastore/free/main/ssh/cf.sh" && chmod +x cf.sh && ./cf.sh
 # echo  "automatic domain....... : " -e jj
 #     if [$jj]; then
-$         echo -e
+#          echo -e
 #clear
 # yellow "Add Domain for vmess/vless/trojan dll"
 # echo " "
@@ -159,14 +159,14 @@ $         echo -e
  #       echo -e "
  #       Nothing input for domain!
 #        Then a random domain will be created"
-$    else
-$        echo "$jj" > /root/scdomain
-$	echo "$jj" > /etc/xray/scdomain
-$	echo "$jj" > /etc/xray/domain
-$	echo "$jj" > /etc/v2ray/domain
-$	echo "$jj" > /root/domain
-$        echo "IP=$jj" > /var/lib/scrz-prem/ipvps.conf
-$    fi
+#    else
+#        echo "$jj" > /root/scdomain
+#	echo "$jj" > /etc/xray/scdomain
+#	echo "$jj" > /etc/xray/domain
+#	echo "$jj" > /etc/v2ray/domain
+#	echo "$jj" > /root/domain
+#        echo "IP=$jj" > /var/lib/scrz-prem/ipvps.conf
+#     fi
     
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
