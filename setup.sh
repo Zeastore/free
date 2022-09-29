@@ -120,7 +120,7 @@ echo -ne "[ ${green}INFO${NC} ] Check permission : "
 
 mkdir /var/lib/scrz-prem;
 echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
-wget https://raw.githubusercontent.com/Zeastore/free/main/xray/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/Zeastore/free/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
 
 #if [ -f "/etc/xray/domain" ]; then
 #echo ""
