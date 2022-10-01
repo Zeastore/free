@@ -116,6 +116,8 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
        restore
      elif [[ $x -eq 18 ]]; then
        xolpanel
+    elif [[ $x -eq 19 ]]; then
+       speedtest
     else
        menu
     fi
