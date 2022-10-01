@@ -180,7 +180,7 @@ clear
 wget https://raw.githubusercontent.com/Zeastore/free/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/Zeastore/free/main/bckp/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 wget https://raw.githubusercontent.com/Zeastore/free/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
-wget https://raw.githubusercontent.com/Zeastore/free/main/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
+#wget https://raw.githubusercontent.com/Zeastore/free/main/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
