@@ -48,6 +48,7 @@ echo -e "\e[36m╘════════════════════�
  [\033[1;36m16\033[0m]  Backup 
  [\033[1;36m17\033[0m]  Restore
  [\033[1;36m18\033[0m]  Xol Panel Bot
+ [\033[1;36m19\033[0m]  Speedtest VPS
 "
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -ne
@@ -159,8 +160,10 @@ else
        bckp
     elif [[ $x -eq 17 ]]; then
        restore
-     elif [[ $x -eq 18 ]]; then
+    elif [[ $x -eq 18 ]]; then
        xolpanel
+    elif [[ $x -eq 19 ]]; then
+       speedtest
     else
        menu
     fi
