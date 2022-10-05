@@ -22,7 +22,7 @@ sub=$(</dev/urandom tr -dc a-z0-9 | head -c2)
 
 SUB_DOMAIN=${sub}.zeaking.my.id
 CF_ID=mulahkual@gmail.com
-CF_KEY=1351e3252ad80b9a761d34d125545053403b5
+CF_KEY=565df838cbdf80722e12eb5b1d7186143b74e
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Updating DNS for ${SUB_DOMAIN}..."
