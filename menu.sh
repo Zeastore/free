@@ -68,7 +68,6 @@ echo -e "[ \033[0;31mChangelog\033[0m ]"
 curl -sS https://raw.githubusercontent.com/bokir-tampan/biji/main/clgshow
 echo -e "
 "
-fi
 echo -e "\e[36m╘═════════════════════════════════════════════╛\033[0m"
 echo
 echo -ne "Select menu : "; read x
