@@ -62,7 +62,7 @@ cat > /home/vps/public_html/ss-$user.txt <<-END
   },
  "inbounds": [
    {
-      "port": 10808,
+      "port": 14963,
       "protocol": "socks",
       "settings": {
         "auth": "noauth",
@@ -79,7 +79,7 @@ cat > /home/vps/public_html/ss-$user.txt <<-END
       "tag": "socks"
     },
     {
-      "port": 10809,
+      "port": 14964,
       "protocol": "http",
       "settings": {
         "userLevel": 8
@@ -169,7 +169,7 @@ cat > /home/vps/public_html/ss-$user.txt <<-END
   },
  "inbounds": [
    {
-      "port": 10808,
+      "port": 36193,
       "protocol": "socks",
       "settings": {
         "auth": "noauth",
@@ -186,7 +186,7 @@ cat > /home/vps/public_html/ss-$user.txt <<-END
       "tag": "socks"
     },
     {
-      "port": 10809,
+      "port": 36194,
       "protocol": "http",
       "settings": {
         "userLevel": 8
