@@ -12,7 +12,7 @@ upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
-IP={domain}
+IP=$(/var/lib/scrz-prem/ipvps.conf)
 serverV=$( curl -sS https://raw.githubusercontent.com/bokir-tampan/test/main/versi)
 if [ "$cekup" = "day" ]; then
 echo    -e   "System Uptime   :  $uphours $upminutes $uptimecek"
