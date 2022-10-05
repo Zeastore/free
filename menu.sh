@@ -12,15 +12,15 @@ upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
-IP=$(/var/lib/scrz-prem/ipvps.conf)
+ISPVPS=$( curl -s ipinfo.io/org )
 serverV=$( curl -sS https://raw.githubusercontent.com/bokir-tampan/test/main/versi)
 if [ "$cekup" = "day" ]; then
 echo    -e   "System Uptime   :  $uphours $upminutes $uptimecek"
 else
 echo -e   "System Uptime   :  $uphours $upminutes"
 fi
-echo -e "Current Domain  :  $IP"
-echo -e "IP-VPS          :  $IPVPS"
+echo -e "ISP-VPS        :  $ISPVPS"
+echo -e "IP-VPS         :  $IPVPS"
 echo -e "\e[36m╒════════════════════════════════════════════╕\033[0m"
 echo -e " \E[0;41;36m                 SSH MENU                   \E[0m"
 echo -e "\e[36m╘════════════════════════════════════════════╛\033[0m"
