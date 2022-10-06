@@ -815,23 +815,14 @@ systemctl restart nginx
 systemctl enable runn
 systemctl restart runn
 sleep 1
-#wget -O usernew "https://raw.githubusercontent.com/Zeastore/free/main/ssh/usernew.sh"
-wget -O add-ws "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-ws.sh"
-wget -O add-vless "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-vless.sh"
-wget -O add-tr "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-tr.sh"
-wget -O del-user "https://raw.githubusercontent.com/Zeastore/free/main/xray/del-ws.sh"
-wget -O cek-user "https://raw.githubusercontent.com/Zeastore/free/main/xray/cek-ws.sh"
-wget -O renew-user "https://raw.githubusercontent.com/Zeastore/free/main/xray/renew-ws.sh"
-wget -O crtv2ray "https://raw.githubusercontent.com/Zeastore/free/main/xray/cert.sh"
-wget -O add-ssws "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-ssws.sh"
-  chmod +x add-ws
-  chnod +x add-vless
-  chmod +x add-tr
-  chmod +x del-user
-  chmod +x cek-user
-  chmod +x renew-user
-  chmod +x crtv2ray
-  chmod +x add-ssws
+wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-ws.sh" && chmod +x /usr/bin/add-ws
+wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-vless.sh" && chmod +x /usr/bin/add-vless
+wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-tr.sh" && chmod +x /usr/bin/add-tr
+wget -q -O /usr/bin/del-user "https://raw.githubusercontent.com/Zeastore/free/main/xray/del-ws.sh" && chmod +x /usr/bin/del-user
+wget -q -O /usr/bin/cek-ws "https://raw.githubusercontent.com/Zeastore/free/main/xray/cek-ws.sh" && chmod +x /usr/bin/cek-ws
+wget -q -O /usr/bin/renew-ws "https://raw.githubusercontent.com/Zeastore/free/main/xray/renew-ws.sh" && chmod +x /usr/bin/renew-ws
+wget -q -O /usr/bin/crtv2ray "https://raw.githubusercontent.com/Zeastore/free/main/xray/crt.sh" && chmod +x /usr/bin/crtv2ray
+wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/Zeastore/src/main/xray/add-ssws.sh" && chmod +x /usr/bin/add-ssws
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 yellow "xray/Vmess"
