@@ -156,7 +156,7 @@ cat > /etc/xray/config.json << END
        "streamSettings":{
          "network": "ws",
             "wsSettings": {
-                "path": "/vmess"
+                "path": "/pastmu"
           }
         }
      },
@@ -418,7 +418,7 @@ sed -i '$ iproxy_set_header Connection "upgrade";' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_set_header Host \$http_host;' /etc/nginx/conf.d/xray.conf
 sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 
-sed -i '$ ilocation = /vmess' /etc/nginx/conf.d/xray.conf
+sed -i '$ ilocation = /pastmu' /etc/nginx/conf.d/xray.conf
 sed -i '$ i{' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_pass http://127.0.0.1:14017;' /etc/nginx/conf.d/xray.conf
@@ -520,14 +520,14 @@ systemctl enable runn
 systemctl restart runn
 
 sleep 1
-wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/Zeastore/src/main/xray/add-ws.sh" && chmod +x /usr/bin/add-ws
-wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/Zeastore/src/main/xray/add-vless.sh" && chmod +x /usr/bin/add-vless
-wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/Zeastore/src/main/xray/add-tr.sh" && chmod +x /usr/bin/add-tr
-wget -q -O /usr/bin/del-user "https://raw.githubusercontent.com/Zeastore/src/main/xray/del-ws.sh" && chmod +x /usr/bin/del-user
-wget -q -O /usr/bin/cek-ws "https://raw.githubusercontent.com/Zeastore/src/main/xray/cek-ws.sh" && chmod +x /usr/bin/cek-ws
-wget -q -O /usr/bin/renew-ws "https://raw.githubusercontent.com/Zeastore/src/main/xray/renew-ws.sh" && chmod +x /usr/bin/renew-ws
-wget -q -O /usr/bin/crtv2ray "https://raw.githubusercontent.com/Zeastore/src/main/xray/crt.sh" && chmod +x /usr/bin/crtv2ray
-wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/Zeastore/src/main/xray/add-ssws.sh" && chmod +x /usr/bin/add-ssws
+wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-ws.sh" && chmod +x /usr/bin/add-ws
+wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-vless.sh" && chmod +x /usr/bin/add-vless
+wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-tr.sh" && chmod +x /usr/bin/add-tr
+wget -q -O /usr/bin/del-user "https://raw.githubusercontent.com/Zeastore/free/main/xray/del-ws.sh" && chmod +x /usr/bin/del-user
+wget -q -O /usr/bin/cek-ws "https://raw.githubusercontent.com/Zeastore/free/main/xray/cek-ws.sh" && chmod +x /usr/bin/cek-ws
+wget -q -O /usr/bin/renew-ws "https://raw.githubusercontent.com/Zeastore/free/main/xray/renew-ws.sh" && chmod +x /usr/bin/renew-ws
+wget -q -O /usr/bin/crtv2ray "https://raw.githubusercontent.com/Zeastore/free/main/xray/crt.sh" && chmod +x /usr/bin/crtv2ray
+wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/Zeastore/free/main/xray/add-ssws.sh" && chmod +x /usr/bin/add-ssws
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 yellow "xray/Vmess"
