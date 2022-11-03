@@ -141,28 +141,10 @@ wget -q https://raw.githubusercontent.com/Zeastore/free/main/tools.sh;chmod +x t
 rm tools.sh
 clear
 
-#mkdir /var/lib/premium-script;
-#echo "IP=" >> /var/lib/premium-script/ipvps.conf
-# wget -q "https://raw.githubusercontent.com/Zeastore/free/main/ssh/cf.sh" && chmod +x cf.sh && ./cf.sh
-# echo  "automatic domain....... : " -e jj
-#     if [$jj]; then
-#          echo -e
-#clear
-# yellow "Add Domain for vmess/vless/trojan dll"
-# echo " "
-# read -rp "Input ur domain : " -e pp
- #   if [ -z $pp ]; then
- #       echo -e "
- #       Nothing input for domain!
-#        Then a random domain will be created"
-#    else
-#        echo "$jj" > /root/scdomain
-#	echo "$jj" > /etc/xray/scdomain
-#	echo "$jj" > /etc/xray/domain
-#	echo "$jj" > /etc/v2ray/domain
-#	echo "$jj" > /root/domain
-#        echo "IP=$jj" > /var/lib/scrz-prem/ipvps.conf
-#     fi
+mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
+echo "IP=" >> /var/lib/scrz-prem/ipvps.conf
+wget https://raw.githubusercontent.com/Zeastore/src/main/ssh/cf.sh && chmod +x cf.sh && ./cf.sh
+
     
 #install ssh ovpn
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -178,7 +160,7 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 sleep 2
 clear
 wget https://raw.githubusercontent.com/Zeastore/free/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget https://raw.githubusercontent.com/Zeastore/free/main/bckp/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+#wget https://raw.githubusercontent.com/Zeastore/free/main/bckp/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 wget https://raw.githubusercontent.com/Zeastore/free/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 #wget https://raw.githubusercontent.com/Zeastore/free/main/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh
 clear
